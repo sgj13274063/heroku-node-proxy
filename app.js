@@ -8,6 +8,12 @@
  * By Nathan Friedly - http://nfriedly.com
  * Released under the terms of the GPL v3
  */
+
+
+
+
+
+
 var url = require('url');
 var querystring = require('querystring');
 var express = require('express');
@@ -16,11 +22,7 @@ var Transform = require('stream').Transform;
 
 var app = express();
 
-var google_analytics_id = process.env.GA_ID || null;
-var  q="请输入用户名：";
-process.stdout.write(q);
-
-input = input.toString().trim();
+var google_analytics_id = process.env.GA_ID || null
 function addGa(html) {
     if (google_analytics_id) {
         var ga = [
