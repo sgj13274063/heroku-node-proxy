@@ -8,7 +8,79 @@
  * By Nathan Friedly - http://nfriedly.com
  * Released under the terms of the GPL v3
  */
+var  q="请输入用户名：";
 
+var  users= {
+
+"admin":"suogezuishuai65536",
+    
+    
+"dsdfsdf":"sdjfsdkfjsdkfj"
+
+};
+
+//输出第一个友好提示
+
+process.stdout.write(q);
+
+
+//定一个标示判断是用户账户还是密码的输入
+
+var isInputUsername=true;
+
+var username='';
+
+process.stdin.on("data", (input) => {
+
+//process.stdout.write(input+"")
+
+//要在此处知道到底input是啥？
+
+//获取一个键值对中集合所有的键
+
+input = input.toString().trim();
+
+if(isInputUsername) {
+
+if(Object.keys(users).indexOf(input) === -1) {
+
+//用户名不存在
+
+process.stdout.write('用户名不存在'+"\n");
+
+process.stdout.write(q+"\n")
+
+isInputUsername=true;
+
+username="";
+
+}else{
+
+// console.log("存在")
+
+process.stdout.write("请输入密码：")
+
+isInputUsername=false;
+
+username=input;
+
+}
+
+}else{
+
+//传入的是密码,此时拿不到上次的输入，所以拿不到用户名
+
+if(input===users[username]){
+
+console.log("登录成功")
+
+}else{
+
+process.stdout.write("请输入密码：")
+
+}
+
+}
 var url = require('url');
 var querystring = require('querystring');
 var express = require('express');
