@@ -1,8 +1,8 @@
 {
-  "name": "通用Web代理 (Node Unblocker)",
-  "description": "基于Node-Unblocker的Web代理，轻松翻墙看世界",
+  "name": "任意网站反向proxxxxyhhh",
+  "description": "任意网站反向proxxxxxxy",
   "image": "heroku/nodejs",
-  "repository": "https://github.com/gfw-breaker/heroku-node-proxy",
+ // "repository": "https://github.com/gfw-breaker/heroku-ne-proxy",
   "keywords": ["node-noblocker", "gfw-breaker"],
   "website": "https://github.com/gfw-breaker"
 }
