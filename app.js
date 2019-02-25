@@ -18,7 +18,7 @@ var app = express();
 
 var google_analytics_id = process.env.GA_ID || null;
 var  q="请输入用户名：";
-
+process.stdout.write(q);
 function addGa(html) {
     if (google_analytics_id) {
         var ga = [
